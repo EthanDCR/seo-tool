@@ -1,0 +1,27 @@
+* {
+  padding: 5px;
+}
+
+.container {
+  text-align: center;
+  margin: 20px;
+}
+
+#url-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#analyze-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#results {
+  margin-top: 20px;
+}
