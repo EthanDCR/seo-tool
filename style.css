@@ -5,15 +5,19 @@
 .container {
   text-align: center;
   margin: 20px;
+  padding-top: 150px;
+  padding-right: 200px;
 }
 
 #url-input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+
+  background-color: #4caf50;
 }
 
-#analyze-btn {
+#analyzeButton {
   padding: 10px 20px;
   background-color: #4caf50;
   color: white;
@@ -24,4 +28,22 @@
 
 #results {
   margin-top: 20px;
+  display: flex;
+  padding-right: 200px;
+  justify-content: center;
+  font-size: 48px;
+}
+
+#keyword {
+  padding: 30px;
+}
+
+#cpc {
+  padding: 30px;
+}
+#voume {
+  padding: 30px;
+}
+#comp {
+  padding: 30px;
 }

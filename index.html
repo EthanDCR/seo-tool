@@ -1,41 +1,41 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seo-tool</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seo-tool</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
 
-      <!-- TODO: fix page styling: colors are gone now.   -->
+<!-- TODO: fix page styling: colors are gone now.   -->
 
+<body>
+  <h1>SEO Analyzer</h1>
+  <div class="container">
+    <label for="keyword-input">Enter URL:</label>
+    <input type="text" id="keyword-input" />
+    <button id="analyzeButton">Analyze</button>
+    <div id="results"></div>
+  </div>
 
-  <body>
-    <div class="container">
-      <h1>SEO Analyzer</h1>
-      <label for="url-input">Enter URL:</label>
-      <input type="text" id="keyword-input" />
-      <button id="analyzeButton">Analyze</button>
-      <div id="results"></div>
-    </div>
+  <div id="results">
+    <!-- TODO: Style this div   -->
+    <table>
+      <thead>
+        <tr>
+          <th id="keyword">Keyword</th>
+          <th id="cpc">CPC</th>
+          <th id="volume">Volume</th>
+          <th id="comp">Competition</th>
+        </tr>
+      <tbody></tbody>
+      </thead>
+    </table>
+  </div>
 
-    <div id="results">
-      <!-- TODO: Style this div   -->
-      <table>
-        <thead>
-          <tr>
-            <th>Keyword</th>
-            <th>CPC</th>
-            <th>Volume</th>
-            <th>Competition</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+  <script src="index.js"></script>
+  <!-- <script src="analyze.js"></script>-->
+</body>
 
-    <script src="index.js"></script>
-    <script src="analyze.js"></script>
-  </body>
 </html>

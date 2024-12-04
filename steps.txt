@@ -1,0 +1,24 @@
+
+Task	Time Estimate
+Set up React project	1 hour
+Create input form	1 hour
+Implement SEO checks	3–4 hours
+Design result display	2 hours
+Add enhancements (optional)	2–3 hours
+
+
+connect to new api, serp/google search ( X )
+
+get some results displayed in html (seo info) ( )
+
+style the webpage so it looks nice and clean. ( )
+
+write readme file for the tool. ( )
+
+add tool to your portfolio site. ( )
+
+move to fixing game or optimizing portfolio and adding necessities(make this
+decision when you get to this point) ( )
+
+
+
