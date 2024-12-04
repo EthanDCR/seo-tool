@@ -1,49 +1,65 @@
 * {
-  padding: 5px;
+  margin: 0;
+  padding-top: 50px;
+  box-sizing: border-box; /* Ensures consistent sizing across browsers */
+  
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #CADCFC; /* light blue */
 }
+
+#h1 {
+    display:flex;
+    justify-content:center;
+}
+
+
+
+
+
+
 
 .container {
-  text-align: center;
-  margin: 20px;
-  padding-top: 150px;
-  padding-right: 200px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #8AB6F9;
+  max-height: 200px;
 }
 
-#url-input {
+#keyword-input {
+  width: 100%;
   padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-
-  background-color: #4caf50;
 }
 
 #analyzeButton {
-  padding: 10px 20px;
-  background-color: #4caf50;
+  background-color: #007bff;
   color: white;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 #results {
-  margin-top: 20px;
   display: flex;
-  padding-right: 200px;
-  justify-content: center;
-  font-size: 48px;
+  flex-direction: column;
+  align-items: center;
 }
 
-#keyword {
-  padding: 30px;
+.result-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
-#cpc {
-  padding: 30px;
-}
-#voume {
-  padding: 30px;
-}
-#comp {
-  padding: 30px;
+.result-item:last-child {
+  border-bottom: none;
 }

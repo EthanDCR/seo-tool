@@ -4,12 +4,11 @@ document.getElementById("analyzeButton").addEventListener("click", function () {
   const keywords = keywordsInput.split(",");
 
   keywords.forEach((keyword) => {
-    const apiKey = "349dbeacc0mshf0e792106990ea3p1a894fjsn0fd1ad356298";
+    const apiKey = "YOUR_RAPID_API_KEY";
     // this key is from rapidapi and the api is called seo keyword research
 
     const fetchUrl = `https://google-keyword-insight1.p.rapidapi.com/globalkey/?keyword=${encodeURIComponent(keyword)}&lang=en`;
 
-    let data;
 
     fetch(fetchUrl, {
       method: "GET",
@@ -19,8 +18,9 @@ document.getElementById("analyzeButton").addEventListener("click", function () {
       },
     })
       .then((response) => response.json())
-      .then((responseData) => {
-        data = responseData;
+     .then(data => console.log(data))
+          .then((responseData) => {
+       let data = responseData;
       })
 
       .catch((error) => {
@@ -28,32 +28,32 @@ document.getElementById("analyzeButton").addEventListener("click", function () {
       });
   });
 
-  console.log(data);
   console.log("test1");
 
-      console.log("makes it here ");
+  console.log("makes it here "); // good at this point for now.
 
-      keywords.forEach((keyword) => {
-        const keywordData = data.find((item) => item.text === keyword);
+  keywords.forEach((keyword) => {
+    const keywordData = data.find((item) => item.text === keyword);
 
-        console.log("test2");
+    console.log("test2");
 
-        if (keywordData) {
-          const resultsDiv = document.getElementById("results");
-          const keywordDiv = document.createElement("div");
-          keywordDiv.textContent = `Keyword: ${keyword}`;
-          resultsDiv.appendChild(keywordDiv);
-          console.log("test3");
-          const dataDiv = document.createElement("div");
-          dataDiv.innerHTML = `
-        <p>CPC: ${keywordData.cpc}</p>
-        <p>Volume: ${keywordData.vol}</p>
-        <p>Competition: ${keywordData.competition}</p; 
+    if (keywordData) {
+      const resultsDiv = document.getElementById("results");
+      const keywordDiv = document.createElement("div");
+      keywordDiv.textContent = `Keyword: ${keyword}`;
+      resultsDiv.appendChild(keywordDiv);
+      console.log("test3");
+      const dataDiv = document.createElement("div");
 
+      dataDiv.innerHTML = `
+  <p>CPC: ${keywordData.cpc}</p>
+  <p>Volume: ${keywordData.vol}</p>
+  <p>Competition: ${keywordData.competition}</p>
+`;
 
-               resultsDiv.appendChild(dataDiv);
-        } else {
-          console.error(`Keyword not found: ${keyword}`);
-        }
-      });
-    });
+      resultsDiv.appendChild(dataDiv);
+    } else {
+      console.error(`Keyword not found: ${keyword}`);
+    }
+  });
+});
