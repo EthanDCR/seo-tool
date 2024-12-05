@@ -1,12 +1,13 @@
 * {
   margin: 0;
-  padding-top: 50px;
-  box-sizing: border-box; /* Ensures consistent sizing across browsers */
-  
+   
+  }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #CADCFC; /* light blue */
+background: conic-gradient(from 0deg, #1a75fa, #408cf2, #8cbae3, #b2d1db, #d9e8d4, #1a75fa);
+
+  padding-top: 50px;
 }
 
 #h1 {
@@ -15,20 +16,35 @@ body {
 }
 
 
-
-
-
-
-
 .container {
+
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
   border-radius: 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #8AB6F9;
   max-height: 200px;
+  position: relative;
 }
+
+
+
+.container::after {
+  content:'';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(#ff4545,#00ff99,#006aff,#ff0095);
+  top:50%;
+  left:50%;
+  translate: -50% -50%;
+  z-index: -1;
+  border-radius:30px;
+  padding: 10px;
+  
+}
+
+
 
 #keyword-input {
   width: 100%;
