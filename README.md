@@ -14,16 +14,14 @@ Installation --
 
 Clone this repository to your local machine:
 
-
-Copy code --
-
 git clone https://github.com/ethandcr/seo-analyzer-tool.git  
+
+
 Navigate to the project directory:
 
-
-Copy code --
-
 cd seo-analyzer-tool  
+
+
 Open the index.html file in your preferred web browser to run the application.
 
 Usage -- 
